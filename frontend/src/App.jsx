@@ -11,6 +11,7 @@ import AdminAuth from "./Pages/Admin/AdminAuth"
 import SearchPage from "./Pages/User/SearchPage"
 import UserSignin from "./Model/User/userSignIn"
 import UserSignup from "./Model/User/userSignup"
+import AdminDashboard from "./Pages/Admin/AdminDashboard"
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Route path="/seller/dashboard" element={<SellerDashboard />}  />
       <Route path="/admin/auth" element={<AdminAuth />} />
       <Route path="/search" element={<SearchPage />} />
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
     </Routes>
     </BrowserRouter>
     </>

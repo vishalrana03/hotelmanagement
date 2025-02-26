@@ -30,9 +30,10 @@ const SellerSignup = ({authType}) => {
             const response = await axios.post(`${BACKEND_URL}/owner/signup`,data)
             toast.success("Signup Successful")
             localStorage.setItem("token",response.data.token)
-        localStorage.setItem("username",response.data.username)
+            localStorage.setItem("username",response.data.ownername)
+            localStorage.setItem("type","owner")
             setTimeout(()=>{
-                navigate("/seller/add")
+                navigate("/seller/dashboard")
             },2000)
         } catch (error) {
             toast.error("invalid credentials")

@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 const AddHotel = () => {
   const navigate = useNavigate()
   const [details,setDetails] = React.useState({
-    name: "",
+    hotelname: "",
     area: "",
     city: "",
     state: "",
@@ -33,7 +33,7 @@ const AddHotel = () => {
   async function handleSubmit(){
     console.log(details)
     let formData = new FormData();
-    formData.append("name",details.name);
+    formData.append("hotelname",details.hotelname);
     formData.append("area",details.area)
     formData.append("city",details.city)
     formData.append("state",details.state)
@@ -71,8 +71,8 @@ const AddHotel = () => {
       <Toaster />
       <Input type="text" 
       name="Name" 
-      id="name" 
-      onChange={(e)=>{handleChange("name",e)}} />
+      id="hotelname" 
+      onChange={(e)=>{handleChange("hotelname",e)}} />
 
       <Input type="text" 
       name="Area" 

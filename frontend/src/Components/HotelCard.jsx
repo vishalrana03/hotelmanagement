@@ -8,7 +8,7 @@ const HotelCard = ({item,buttonName,buttonClick,children}) => {
     <div className='w-[70%] border-b flex justify-around p-2 items-center'>
       <div className={`w-36 h-36`} style={{background:`url(${item.image})`,backgroundSize:"cover"}}></div>
         <ul>
-            <li className='text-2xl font-bold'>{item.hotelName}</li>
+            <li className='text-2xl font-bold'>{item.hotelname}</li>
             <li className='text-lg font-semibold'>{item.area},{item.city}</li>
             <li className='text-xl '>$ {item.price}</li>
         </ul>
@@ -31,7 +31,7 @@ export const AdminBookingCard = ({item}) =>{
         <div>
           <ul>
             <li className='font-bold uppercase'>Hotel Details</li>
-            <li>Hotel Name: {item.hotelId[0].hotelName}</li>
+            <li>Hotel Name: {item.hotelId[0].hotelname}</li>
             <li>Address: {item.hotelId[0].address}</li>
             <li>Price: {item.hotelId[0].price}</li>
           </ul>

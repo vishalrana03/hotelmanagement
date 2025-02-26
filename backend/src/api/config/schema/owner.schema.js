@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 
 const ownerSchema = new mongoose.Schema({
-    name: {
+    ownername: {
         type: String,
         required: true
     },

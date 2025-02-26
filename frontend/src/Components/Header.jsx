@@ -34,7 +34,7 @@ const Header = () => {
         fromDate: null,
         toDate: null,
         RoomType: null,
-        Rooms: 1,
+        Rooms: null,
     });
 
     function handlechange(type,e){
@@ -44,7 +44,8 @@ const Header = () => {
         })
     )}
 
-    function handlesubmit(){
+    function handlesubmit(e){
+        e.preventDefault()
         console.log(Value,"Value")
         dispatch(updateItem(Value))
         navigate("/search")
@@ -111,7 +112,7 @@ const Header = () => {
                         </select>
                         </div>
 
-                        <button className='text-white  bg-black hover:bg-gray-800  transition-all  rounded-full ml-4 w-[90%] mb-4 h-14  bg-gradient-to-r from-pink-500 to-violet-500 hover:scale-105 duration-300 cursor-pointer' onClick={(e)=>handlesubmit(e)}>Search Hotel</button>
+                        <button className='text-white  bg-black hover:bg-gray-800  transition-all  rounded-full ml-4 w-[90%] mb-4 h-14  bg-gradient-to-r from-pink-500 to-violet-500 hover:scale-105 duration-300 cursor-pointer' onClick={handlesubmit}>Search Hotel</button>
 
                         </div>
                     </form>

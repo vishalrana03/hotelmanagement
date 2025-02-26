@@ -20,7 +20,7 @@ export const addHotel = async(req,res) =>{
         const uploaded = await fileUpload(file)
         const url = `${env.CLOUDFRONT_DOMAIN}/${uploaded.filename}`
         const response = await hotel.create({
-            hotelName: body.name,
+            hotelname: body.hotelname,
             area: body.area,
             city: body.city,
             state: body.state,
@@ -76,7 +76,7 @@ export const searchHotel = async(req,res)=>{
         let hotels = []
         const response = await hotel.find({
             $or: [
-                {hotelName: {$regex: new RegExp("^" + body.location,"i")}},
+                {hotelname: {$regex: new RegExp("^" + body.location,"i")}},
                 {area: {$regex: new RegExp("^" + body.location,"i")}},
                 {city: {$regex: new RegExp("^" + body.location,"i")}}
             ]
