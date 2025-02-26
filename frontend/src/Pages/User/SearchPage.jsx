@@ -26,8 +26,7 @@ const SearchPage = ({}) => {
     }
     fetchHotels()
   }, [items.updateItem])
-  console.log(items)
-  console.log(hotels,"hotel")
+
   function BookNow(item){
     let data = {
       searchDetails: items.updateItem,
